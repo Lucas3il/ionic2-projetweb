@@ -8,7 +8,8 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  posts:any;
+  monLabel:string="salut";
+  zob:any;
 
   constructor(public navCtrl: NavController) {
 
@@ -30,7 +31,11 @@ export class HomePage {
         console.log("else");
       }
 		}
+ 
+  }
 
+  function(zob:string) {
+    console.log(zob);
   }
 
 }

@@ -12,6 +12,11 @@
 
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way. BOOM ----- tactac
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input [(ngModel)]="zob" type="text" value=""></ion-input>
+    </ion-item>
+    <button ion-button color="primary" (click)="function(zob)">Light</button>
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
