@@ -10,13 +10,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Test } from '../pages/test/test';
+import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablissement';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    Test
+    Test,
+    AjoutEtablissement
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { Test } from '../pages/test/test';
     MyApp,
     HomePage,
     ListPage,
-    Test
+    Test,
+    AjoutEtablissement
   ],
   providers: [
     StatusBar,
