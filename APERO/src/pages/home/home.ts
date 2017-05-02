@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map'
 
 
 @Component({
@@ -11,8 +13,7 @@ export class HomePage {
   monLabel:string="salut";
   zob:any;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, private http:Http) {
 
 
     var xhr = new XMLHttpRequest();
@@ -22,10 +23,8 @@ export class HomePage {
 
     	xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4 && xhr.status == 200){
-				/*var rep = xhr.responseText;
-				alert(rep);*/
 				var rep = JSON.parse(xhr.responseText);
-        console.log("rep : "+rep.nomClient+rep.listePizzas);
+        console.log("rep : "+rep.nomClient+" "+rep.listePizzas);
 			}
       else {
         console.log("else");
