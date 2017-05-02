@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map'
+import { DepotLivre } from '../depot-livre/depot-livre';
 
 
 @Component({
@@ -35,6 +36,10 @@ export class HomePage {
 
   function(zob:string) {
     console.log(zob);
+  }
+
+  toDepot():void {
+    this.navCtrl.push(DepotLivre);
   }
 
 }
