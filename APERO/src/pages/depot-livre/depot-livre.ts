@@ -43,4 +43,23 @@ export class DepotLivre {
     this.allDepot.length--;
   }
 
+  validerListe(){
+    var xhr = new XMLHttpRequest();
+    	// envoi requete
+      var listeLivre=JSON.stringify(this.allDepot);
+    	xhr.open("GET", "http://leofazendeiro.fr/TestApero/depotLivre.php?famille='"+this.famille+"'"+"&&listeLivre="+listeLivre, true);
+    	xhr.send(null);
+
+    	xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4 && xhr.status == 200){
+				 var rep = JSON.parse(xhr.responseText);
+        //var rep = xhr.responseText;
+        console.log(rep);
+			}
+      else {
+        console.log("nok");
+      }
+		}
+  }
+
 }

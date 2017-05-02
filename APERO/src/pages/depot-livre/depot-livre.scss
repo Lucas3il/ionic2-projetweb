@@ -2,7 +2,8 @@ page-depot-livre {
     .gauche {
         width:50%;
         float:left;
-        background-color:darkgray;
+        min-height:30%;
+        border:1px solid black;
     }
 
     .droite {
