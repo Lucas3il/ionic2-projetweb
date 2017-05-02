@@ -1,0 +1,49 @@
+<!--
+  Generated template for the AjoutEtablissement page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AjoutEtablissement</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h1>Ajout d'un établissement</h1>
+  <ion-item>
+    <ion-label floating>Nom établissement</ion-label>
+    <ion-input type="text" [(ngModel)]="NomEtablissement"></ion-input>
+  </ion-item>
+  <hr/>
+  <ion-item>
+   <ion-label floating>Adresse établissement</ion-label>
+   <ion-input type="text" [(ngModel)]="AdresseEtablissement"></ion-input>
+  </ion-item>
+  <hr>
+  <ion-item>
+    <ion-label floating>Téléphone établissement</ion-label>
+    <ion-input type="text" [(ngModel)]="TelEtablissement"></ion-input>
+  </ion-item>
+
+<ion-list>
+    <ion-item>
+      <ion-label>Classe</ion-label>
+        <ion-select [(ngModel)]="AjoutClasse">
+          <ion-option *ngFor="let classe of mesClasses" value="{{classe}}" >{{classe}}</ion-option>
+        </ion-select>
+    </ion-item>
+    </ion-list>
+
+  <button ion-button (click)="test(name, alterEgo)">valider</button>
+
+  <span *ngFor="let classe of mesClasses">{{classe}}<br/></span>
+  <button ion-button (click)="ajoutClasse()">+++</button>
+
+</ion-content>
+
+<!--*ngFor="let element of tableau" ------ Pour tous les element du tableau -------- element : alias // tableau : variable déclarée dans ts-->

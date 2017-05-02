@@ -1,0 +1,42 @@
+<!--
+  Generated template for the Test page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>test</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="home" padding>
+<div class="container">
+    <h1>Hero Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" class="form-control" id="name" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Prenom</label>
+        <input type="text" class="form-control" id="alterEgo" name="prenom">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+<ion-item>
+  <ion-input type="text" [(ngModel)]="name"></ion-input>
+</ion-item>
+<hr/>
+<ion-item>
+  <ion-input type="text" [(ngModel)]="alterEgo"></ion-input>
+</ion-item>
+<button (click)="test(name, alterEgo)">valider</button>
+</ion-content>

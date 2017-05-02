@@ -9,13 +9,20 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+<<<<<<< HEAD
 import { HttpModule } from '@angular/http';
+=======
+import { Test } from '../pages/test/test';
+import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablissement';
+>>>>>>> origin/master
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    Test,
+    AjoutEtablissement
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,9 @@ import { HttpModule } from '@angular/http';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    Test,
+    AjoutEtablissement
   ],
   providers: [
     StatusBar,
