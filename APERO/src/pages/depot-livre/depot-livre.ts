@@ -57,7 +57,7 @@ export class DepotLivre {
         console.log(rep);
 			}
       else {
-        console.log("nok");
+        console.log("xhr.readyState : "+xhr.readyState+" xhr.status : "+xhr.status);
       }
 		}
   }

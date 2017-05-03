@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>AjoutEtablissement</ion-title>
   </ion-navbar>
 
@@ -19,12 +22,10 @@
     <ion-label floating>Nom établissement</ion-label>
     <ion-input type="text" [(ngModel)]="NomEtablissement"></ion-input>
   </ion-item>
-  <hr/>
   <ion-item>
    <ion-label floating>Adresse établissement</ion-label>
    <ion-input type="text" [(ngModel)]="AdresseEtablissement"></ion-input>
   </ion-item>
-  <hr>
   <ion-item>
     <ion-label floating>Téléphone établissement</ion-label>
     <ion-input type="text" [(ngModel)]="TelEtablissement"></ion-input>
