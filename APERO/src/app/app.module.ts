@@ -9,8 +9,10 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HttpModule } from '@angular/http';
 import { Test } from '../pages/test/test';
 import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablissement';
+import { DepotLivre } from '../pages/depot-livre/depot-livre';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablisse
     HomePage,
     ListPage,
     Test,
-    AjoutEtablissement
+    AjoutEtablissement,
+    DepotLivre
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -30,7 +34,8 @@ import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablisse
     HomePage,
     ListPage,
     Test,
-    AjoutEtablissement
+    AjoutEtablissement,
+    DepotLivre
   ],
   providers: [
     StatusBar,
