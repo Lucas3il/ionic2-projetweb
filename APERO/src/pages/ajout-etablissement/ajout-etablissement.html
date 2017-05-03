@@ -30,19 +30,19 @@
     <ion-input type="text" [(ngModel)]="TelEtablissement"></ion-input>
   </ion-item>
 
-<ion-list>
+<!--<ion-list>
     <ion-item>
       <ion-label>Classe</ion-label>
         <ion-select [(ngModel)]="AjoutClasse">
-          <ion-option *ngFor="let classe of mesClasses" value="{{classe}}" >{{classe}}</ion-option>
+          <ion-option *ngFor="let classe of mesClasses" value="{{classe}}" id="AjoutClasse">{{classe}}</ion-option>
         </ion-select>
     </ion-item>
-    </ion-list>
+    </ion-list>-->
 
-  <button ion-button (click)="test(name, alterEgo)">valider</button>
+  <button ion-button (click)="ajoutClasse(NomEtablissement, AdresseEtablissement, TelEtablissement)">valider</button>
 
-  <span *ngFor="let classe of mesClasses">{{classe}}<br/></span>
-  <button ion-button (click)="ajoutClasse()">+++</button>
+  <!--<span *ngFor="let classe of mesClasses">{{classe}}<br/></span>
+  <button ion-button (click)="ajoutClasse()">+++</button>-->
 
 </ion-content>
 
