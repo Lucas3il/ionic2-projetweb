@@ -13,8 +13,6 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
-
-
     var xhr = new XMLHttpRequest();
     	// envoi requete
     	xhr.open("GET", "http://leofazendeiro.fr/HelloWorld.php", true);
@@ -36,6 +34,8 @@ export class HomePage {
 
   function(zob:string) {
     console.log(zob);
+  }
+   goTo() {
   }
 
 }
