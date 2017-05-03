@@ -1,5 +1,9 @@
 <?php
 
+    include 'connexionBase.php';
+
+    $connexion=connexion();
+
     $famille=$_GET["famille"];
     $listeLivre=$_GET["listeLivre"];
 
