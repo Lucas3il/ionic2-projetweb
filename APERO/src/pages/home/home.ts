@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map'
+import { DepotLivre } from '../depot-livre/depot-livre';
 
 
 @Component({
@@ -11,7 +14,12 @@ export class HomePage {
   monLabel:string="salut";
   zob:any;
 
+<<<<<<< HEAD
   constructor(public navCtrl: NavController) {
+=======
+  constructor(public navCtrl: NavController, private http:Http) {
+
+>>>>>>> eb4a4637233ba5daf5b2a5c19de02d1846ebbbfe
 
     var xhr = new XMLHttpRequest();
     	// envoi requete
@@ -20,10 +28,8 @@ export class HomePage {
 
     	xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4 && xhr.status == 200){
-				/*var rep = xhr.responseText;
-				alert(rep);*/
 				var rep = JSON.parse(xhr.responseText);
-        console.log("rep : "+rep.nomClient+rep.listePizzas);
+        console.log("rep : "+rep.nomClient+" "+rep.listePizzas);
 			}
       else {
         console.log("else");
@@ -36,6 +42,10 @@ export class HomePage {
     console.log(zob);
   }
    goTo() {
+  }
+
+  toDepot():void {
+    this.navCtrl.push(DepotLivre);
   }
 
 }

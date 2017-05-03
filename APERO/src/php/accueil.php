@@ -4,7 +4,6 @@
 
  
         $data[] = Array();
-
         $stmt = $conn->prepare("SELECT * FROM Famille;");
         $stmt->execute();
         while($row  = $stmt->fetch(PDO::FETCH_OBJ))

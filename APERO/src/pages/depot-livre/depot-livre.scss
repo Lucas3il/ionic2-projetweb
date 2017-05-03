@@ -1,0 +1,14 @@
+page-depot-livre {
+    .gauche {
+        width:50%;
+        float:left;
+        min-height:30%;
+        border:1px solid black;
+    }
+
+    .droite {
+        width:50%;
+        float:right;
+    }
+
+}
