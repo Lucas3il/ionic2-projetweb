@@ -7,12 +7,46 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>accueil</ion-title>
+    <ion-title>Accueil</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <button ion-item *ngFor="let famille of familles" (click)="selectionFamille(famille)">
+        {{famille.nom}} {{famille.mail}}
+      </button>
+        </ion-list>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <h1>Famille</h1>
+          <ion-label>Nom</ion-label>
+          <ion-input id="NomFamille"  [(ngModel)]="nom" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Mail</ion-label>
+          <ion-input id="MailFamille"  [(ngModel)]="mail" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Téléphone</ion-label>
+          <ion-input id="TelFamille"  [(ngModel)]="tel" disabled="true"></ion-input>
+        </ion-item>
+        <ion-grid>
+          <ion-row>
+            <button ion-button (click)="itemSelected('Dépot!')">Dépôt de livre</button></ion-row>
+          <ion-row>
+            <button ion-button (click)="itemSelected('Retrait !')">Retrait de livre</button></ion-row>
+          <ion-row>
+            <button ion-button (click)="itemSelected('Retrait !')">Modification de la famille</button>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

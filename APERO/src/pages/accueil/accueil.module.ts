@@ -4,13 +4,12 @@ import { Accueil } from './accueil';
 
 @NgModule({
   declarations: [
-    Accueil,
+    Accueil
   ],
   imports: [
-    IonicModule.forChild(Accueil),
   ],
   exports: [
     Accueil
   ]
 })
-export class AccueilModule {}
+export class AccueilModule { }

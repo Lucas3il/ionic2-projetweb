@@ -13,6 +13,7 @@ import { HttpModule } from '@angular/http';
 import { Test } from '../pages/test/test';
 import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablissement';
 import { DepotLivre } from '../pages/depot-livre/depot-livre';
+import { Accueil } from '../pages/accueil/accueil';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DepotLivre } from '../pages/depot-livre/depot-livre';
     ListPage,
     Test,
     AjoutEtablissement,
-    DepotLivre
+    DepotLivre,
+    Accueil
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { DepotLivre } from '../pages/depot-livre/depot-livre';
     ListPage,
     Test,
     AjoutEtablissement,
-    DepotLivre
+    DepotLivre,
+    Accueil
   ],
   providers: [
     StatusBar,

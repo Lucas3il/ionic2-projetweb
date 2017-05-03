@@ -14,12 +14,7 @@ export class HomePage {
   monLabel:string="salut";
   zob:any;
 
-<<<<<<< HEAD
   constructor(public navCtrl: NavController) {
-=======
-  constructor(public navCtrl: NavController, private http:Http) {
-
->>>>>>> eb4a4637233ba5daf5b2a5c19de02d1846ebbbfe
 
     var xhr = new XMLHttpRequest();
     	// envoi requete
