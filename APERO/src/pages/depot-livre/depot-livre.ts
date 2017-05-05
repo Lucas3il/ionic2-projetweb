@@ -54,6 +54,7 @@ export class DepotLivre {
         this.listeOeuvres=rep;
 			}
       else {
+        
       }
 		}
     var xhr2 = new XMLHttpRequest();
