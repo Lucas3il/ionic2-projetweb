@@ -32,6 +32,8 @@ export class DepotLivre {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.allDepot=new Array<Livre>();
+    console.log("Famille après push : ");
+  console.log(navParams.get('param1'));
     this.famille=new Famille(1, "Borelli", "0623336724", "geoffrey.borelli@gmail.com");
     this.listeOeuvres=new Array<any>();
     this.tabEtat=new Array<any>();

@@ -15,7 +15,7 @@ import {DepotLivre}  from '../depot-livre/depot-livre';
   templateUrl: 'accueil.html',
 })
 export class Accueil {
-
+  familleSelectionnee:Famille;
   familles: any;
   tel:string;
   mail:string;
@@ -58,9 +58,13 @@ export class Accueil {
     this.nom = item.nom;
     this.mail = item.mail;
     this.tel = item.telephone;
+    this.familleSelectionnee= item;
   }
 
   goDepot(){
-    this.navCtrl.popTo(DepotLivre);
+  //  this.navCtrl.popTo(DepotLivre, { param1: this.familleSelectionnee });
+  console.log("Famille avant push :" );
+  console.log(this.familleSelectionnee);
+  this.navCtrl.push(DepotLivre, { param1: this.familleSelectionnee });
   }
 }

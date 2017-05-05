@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { Test } from '../pages/test/test';
 import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablissement';
 import { Accueil } from '../pages/accueil/accueil';
+import { Connexion } from '../pages/connexion/connexion';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +29,8 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Test', component: Test},
       { title: 'AjoutEtablissement', component: AjoutEtablissement},
-      { title: 'Accueil', component: Accueil}
+      { title: 'Accueil', component: Accueil},
+      { title: 'Connexion', component: Connexion}
     ];
 
   }
