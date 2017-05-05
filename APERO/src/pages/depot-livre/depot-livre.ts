@@ -24,6 +24,8 @@ export class DepotLivre {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.allDepot=new Array<Livre>();
+    console.log("Famille après push : ");
+  console.log(navParams.get('param1'));
   }
 
   ionViewDidLoad() {
