@@ -22,6 +22,7 @@ export class DepotLivre {
   listeOeuvres:Array<any>;
   indexLivreChoisi:number;
   tabAnnee:Array<number>;
+  tabEtat:Array<any>;
 
   livreChoisi:boolean=false;
 
@@ -33,10 +34,13 @@ export class DepotLivre {
     this.allDepot=new Array<Livre>();
     this.famille=new Famille(1, "Borelli", "0623336724", "geoffrey.borelli@gmail.com");
     this.listeOeuvres=new Array<any>();
+    this.tabEtat=new Array<any>();
     this.tabAnnee=new Array<number>();
-    for (var i:number=0; i<50; i++){
-      this.tabAnnee[i]=i+1980;
+    for (var i:number=0; i<20; i++){
+      this.tabAnnee[i]=new Date().getFullYear()-i;
     }
+    console.log("annee : "+new Date().getFullYear());
+  
 
     var xhr = new XMLHttpRequest();
     	// envoi requete
@@ -52,6 +56,22 @@ export class DepotLivre {
       else {
       }
 		}
+    var xhr2 = new XMLHttpRequest();
+    xhr2.open("GET", "http://leofazendeiro.fr/TestApero/recupereEtat.php", true);
+    xhr2.send(null);
+    
+    xhr2.onreadystatechange = () => {
+      if(xhr2.readyState == 4 && xhr2.status == 200){
+        var rep2 = JSON.parse(xhr2.responseText);
+        //var rep = xhr.responseText;
+        this.tabEtat=rep2;
+      }
+      else {
+      }
+    }
+    console.log(this.listeOeuvres);
+    console.log(this.tabEtat);
+
 
   }
 
@@ -62,6 +82,7 @@ export class DepotLivre {
   selectLivre(i:number) {
     this.livreChoisi=true;
     this.indexLivreChoisi=i;
+    
   }
 
   ajoutDepot(etat:string, annee:string):void {
