@@ -2,13 +2,21 @@ page-depot-livre {
     .gauche {
         width:50%;
         float:left;
-        min-height:30%;
+        
+    }
+
+    ion-list {
         border:1px solid black;
+        min-height:30%;
     }
 
     .droite {
         width:50%;
         float:right;
+    }
+
+    ul {
+        list-style-type: none;
     }
 
 }

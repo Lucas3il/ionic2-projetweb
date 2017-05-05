@@ -1,5 +1,7 @@
 <?php
 
+    ini_set('display_errors',1);
+
     function connexion(){
         $dsn = 'mysql:dbname=leofazenqyapero;host=leofazenqyapero.mysql.db'; 
         $user = 'leofazenqyapero'; 
