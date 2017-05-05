@@ -9,6 +9,7 @@ import { Test } from '../pages/test/test';
 import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablissement';
 import { Accueil } from '../pages/accueil/accueil';
 import { Connexion } from '../pages/connexion/connexion';
+import { RetraitLivre } from '../pages/retrait-livre/retrait-livre';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +17,7 @@ import { Connexion } from '../pages/connexion/connexion';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Connexion;
+  rootPage: any = RetraitLivre;
 
   pages: Array<{title: string, component: any}>;
 

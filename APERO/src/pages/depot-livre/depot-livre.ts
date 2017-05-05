@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Livre } from '../../classes/Livre'
 import { Famille } from '../../classes/Famille'
+import { test } from '../../classes/test'
 
 /**
  * Generated class for the DepotLivre page.
@@ -29,19 +30,16 @@ export class DepotLivre {
   etat:string=null;
   annee:string=null;
 
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.allDepot=new Array<Livre>();
-    console.log("Famille après push : ");
-  console.log(navParams.get('param1'));
-    this.famille=new Famille(1, "Borelli", "0623336724", "geoffrey.borelli@gmail.com");
+    //this.famille=new Famille(1, "Borelli", "0623336724", "geoffrey.borelli@gmail.com");
     this.listeOeuvres=new Array<any>();
     this.tabEtat=new Array<any>();
     this.tabAnnee=new Array<number>();
+    this.famille=navParams.get("param1");
     for (var i:number=0; i<20; i++){
-      this.tabAnnee[i]=new Date().getFullYear()-i;
+      this.tabAnnee[i]=new Date().getFullYear()-1-i;
     }
-    console.log("annee : "+new Date().getFullYear());
   
 
     var xhr = new XMLHttpRequest();
@@ -56,6 +54,7 @@ export class DepotLivre {
         this.listeOeuvres=rep;
 			}
       else {
+        
       }
 		}
     var xhr2 = new XMLHttpRequest();

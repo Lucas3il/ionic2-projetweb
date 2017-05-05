@@ -15,6 +15,7 @@ import { AjoutEtablissement } from '../pages/ajout-etablissement/ajout-etablisse
 import { DepotLivre } from '../pages/depot-livre/depot-livre';
 import { Accueil } from '../pages/accueil/accueil';
 import { Connexion } from '../pages/connexion/connexion';
+import { RetraitLivre } from '../pages/retrait-livre/retrait-livre';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Connexion } from '../pages/connexion/connexion';
     AjoutEtablissement,
     DepotLivre,
     Accueil,
-    Connexion
+    Connexion,
+    RetraitLivre
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { Connexion } from '../pages/connexion/connexion';
     AjoutEtablissement,
     DepotLivre,
     Accueil,
-    Connexion
+    Connexion,
+    RetraitLivre
   ],
   providers: [
     StatusBar,
