@@ -33,10 +33,7 @@
     <ion-item *ngIf="livreChoisi">
       <ion-label floating>Etat</ion-label>
       <ion-select [(ngModel)]="etat">
-        <ion-option>tres bon</ion-option>
-        <ion-option>bon</ion-option>
-        <ion-option>assez bon</ion-option>
-        <ion-option>endommagé</ion-option>
+        <ion-option *ngFor="let etat of tabEtat">{{etat.Label}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item *ngIf="livreChoisi">
