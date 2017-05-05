@@ -16,7 +16,7 @@ import { Connexion } from '../pages/connexion/connexion';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = Connexion;
 
   pages: Array<{title: string, component: any}>;
 

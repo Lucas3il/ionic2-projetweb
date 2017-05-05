@@ -1,7 +1,9 @@
 page-connexion {
     .divCentrale{
-        text-align: center;
         width:30%;
-        background-color: red;
+        margin:auto;
+    }
+    .lbl_erreurConnexion{
+        color:red;
     }
 }

@@ -11,10 +11,6 @@
             $data[] = $row;
         }
         echo json_encode((Array)$data);
-
-        // if( ! $row)
-        // {
-        //     die('nothing found');
-        // }
+        
         $dbh = null;
 ?>
