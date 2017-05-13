@@ -16,6 +16,7 @@ import { DepotLivre } from '../pages/depot-livre/depot-livre';
 import { Accueil } from '../pages/accueil/accueil';
 import { Connexion } from '../pages/connexion/connexion';
 import { RetraitLivre } from '../pages/retrait-livre/retrait-livre';
+import {GestionFamille} from '../pages/gestion-famille/gestion-famille';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RetraitLivre } from '../pages/retrait-livre/retrait-livre';
     DepotLivre,
     Accueil,
     Connexion,
-    RetraitLivre
+    RetraitLivre,
+    GestionFamille
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { RetraitLivre } from '../pages/retrait-livre/retrait-livre';
     DepotLivre,
     Accueil,
     Connexion,
-    RetraitLivre
+    RetraitLivre,
+    GestionFamille
   ],
   providers: [
     StatusBar,

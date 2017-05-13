@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 import { Famille } from '../../classes/Famille';
 import {DepotLivre}  from '../depot-livre/depot-livre';
+import {GestionFamille}  from '../gestion-famille/gestion-famille';
 
 /**
  * Generated class for the Accueil page.
@@ -40,11 +41,7 @@ export class Accueil {
         for (var i: number = 1; i < rep.length; i++) {
           famille = new Famille(rep[i]["ID_Famille"], rep[i]["Nom"], rep[i]["Telephone_Famille"], rep[i]["Mail_Famille"]);
           listeFamilles.push(famille);
-          console.log(famille);
         }
-      }
-      else {
-        console.log("else");
       }
     }
     this.familles = listeFamilles;
@@ -62,9 +59,10 @@ export class Accueil {
   }
 
   goDepot(){
-  //  this.navCtrl.popTo(DepotLivre, { param1: this.familleSelectionnee });
-  console.log("Famille avant push :" );
-  console.log(this.familleSelectionnee);
   this.navCtrl.push(DepotLivre, { param1: this.familleSelectionnee });
+}
+
+  goGestionFamille(){
+   this.navCtrl.push(GestionFamille, { param1: this.familleSelectionnee });
   }
 }

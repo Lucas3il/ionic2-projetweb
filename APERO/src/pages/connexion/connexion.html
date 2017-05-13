@@ -23,7 +23,9 @@
       <ion-label floating>Mot de passe</ion-label>
       <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
-    <ion-label id="lbl_erreurConnexion" *ngIf="erreur">Login ou mot de passe invalide.</ion-label>
-    <button ion-button (click)="connexion(login, password)">Connexion</button>
+    <div class="boutonConnexion">
+      <ion-label id="lbl_erreurConnexion" *ngIf="erreur">Login ou mot de passe invalide.</ion-label>
+      <button ion-button (click)="connexion(login, password)">Connexion</button>
+    </div>
   </div>
 </ion-content>

@@ -17,7 +17,7 @@ import { RetraitLivre } from '../pages/retrait-livre/retrait-livre';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = RetraitLivre;
+  rootPage: any = Accueil;
 
   pages: Array<{title: string, component: any}>;
 
