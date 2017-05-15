@@ -39,11 +39,11 @@
         </ion-item>
         <ion-grid>
           <ion-row>
-            <button ion-button (click)="goDepot()">Dépôt de livre</button></ion-row>
+            <button ion-button disabled={{buttonDisabled}} (click)="goDepot()">Dépôt de livre</button></ion-row>
           <ion-row>
-            <button ion-button (click)="goGestionFamille()">Retrait de livre</button></ion-row>
+            <button ion-button disabled={{buttonDisabled}} (click)="goGestionFamille()">Retrait de livre</button></ion-row>
           <ion-row>
-            <button ion-button (click)="goGestionFamille()">Modification de la famille</button>
+            <button ion-button disabled={{buttonDisabled}} (click)="goGestionFamille()">Modification de la famille</button>
           </ion-row>
         </ion-grid>
       </ion-col>

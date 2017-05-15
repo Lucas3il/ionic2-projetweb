@@ -17,45 +17,56 @@
   <ion-grid>
     <ion-row>
       <ion-col>
+        <h1>Famille</h1>
         <ion-item>
-          <ion-label>Nom</ion-label>
+          <ion-label floating>Nom</ion-label>
           <ion-input id="NomFamille" [(ngModel)]="nom"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Mail</ion-label>
+          <ion-label floating>Mail</ion-label>
           <ion-input id="MailFamille" [(ngModel)]="mail"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Téléphone</ion-label>
+          <ion-label floating>Téléphone</ion-label>
           <ion-input id="TelFamille" [(ngModel)]="tel"></ion-input>
         </ion-item>
-        <button ion-button (click)="modificationFamille(nom,mail,tel)">Sauvergarder les changements</button>
+        <button ion-button (click)="modificationFamille(nom,mail,tel)"><ion-icon name="checkmark"></ion-icon></button>
       </ion-col>
       <ion-col>
-        <!--<ion-list>
+        <h1>Enfants</h1>
+        <ion-list>
           <button ion-item *ngFor="let enfant of enfants" (click)="selectionEnfant(enfant)">
         {{enfant.prenom}} {{enfant.nom}}
           </button>
-        </ion-list>-->
+        </ion-list>
+        <button ion-button (click)="nouvelEnfant()" icon-only><ion-icon name="add"></ion-icon></button>
       </ion-col>
       <ion-col>
-        <ion-item>
-          <h1>Enfant</h1>
-          <ion-label>Prénom</ion-label>
-          <ion-input [(ngModel)]="prenom"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Nom</ion-label>
-          <ion-input [(ngModel)]="nom"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Classe</ion-label>
-          <ion-input [(ngModel)]="classe"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Etablissement</ion-label>
-          <ion-input [(ngModel)]="etablissement"></ion-input>
-        </ion-item>
+        <div *ngIf="afficherEnfant">
+          <ion-item>
+            <ion-label floating>Prénom</ion-label>
+            <ion-input [(ngModel)]="prenomEnfant"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Nom</ion-label>
+            <ion-input [(ngModel)]="nomEnfant"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Classe</ion-label>
+            <ion-select [(ngModel)]="classeEnfant" #item>
+              <ion-option *ngFor="let classe of classes" [value]="classe">{{classe.Section}}</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Etablissement</ion-label>
+            <ion-select [(ngModel)]="etablissementEnfant" #item>
+              <ion-option *ngFor="let etablissement of etablissements" [value]="etablissement">{{etablissement.nom}}</ion-option>
+            </ion-select>
+          </ion-item>
+          <button ion-button (click)="modificationEnfant(prenomEnfant,nomEnfant,classeEnfant,etablissementEnfant)" *ngIf="modifEnfant" icon-only><ion-icon name="checkmark"></ion-icon></button>
+          <button ion-button (click)="supprimerEnfant()" *ngIf="modifEnfant" icon-only><ion-icon name="trash" ></ion-icon></button>
+          <button ion-button (click)="ajouterEnfant()" *ngIf="ajoutEnfant" icon-only><ion-icon name="checkmark"></ion-icon></button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

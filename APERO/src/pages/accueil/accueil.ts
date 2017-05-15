@@ -21,6 +21,7 @@ export class Accueil {
   tel:string;
   mail:string;
   nom:string;
+  buttonDisabled=true;
 
   constructor(public navCtrl: NavController) {
     this.chargerListeFamilles();
@@ -56,6 +57,8 @@ export class Accueil {
     this.mail = item.mail;
     this.tel = item.telephone;
     this.familleSelectionnee= item;
+    this.buttonDisabled=null;
+    console.log(this.buttonDisabled);
   }
 
   goDepot(){
