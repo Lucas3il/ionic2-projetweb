@@ -6,6 +6,7 @@ import {DepotLivre}  from '../depot-livre/depot-livre';
 import {GestionFamille}  from '../gestion-famille/gestion-famille';
 import {RetraitLivre}  from '../retrait-livre/retrait-livre';
 import {GestionLivre}  from '../gestion-livre/gestion-livre';
+import {AjoutEtablissement}  from '../ajout-etablissement/ajout-etablissement';
 
 /**
  * Generated class for the Accueil page.
@@ -75,4 +76,10 @@ export class Accueil {
   goGestionLivre(){
     this.navCtrl.push(GestionLivre);
   }
+
+  goGestionEtablissement(){
+    this.navCtrl.push(AjoutEtablissement);
+  }
+
+  
 }
