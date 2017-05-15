@@ -1,0 +1,31 @@
+<!--
+  Generated template for the NouvelleFamille page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>nouvelle-famille</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>Famille</h1>
+  <ion-item>
+    <ion-label floating>Nom</ion-label>
+    <ion-input id="NomFamille" [(ngModel)]="nom"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Mail</ion-label>
+    <ion-input id="MailFamille" [(ngModel)]="mail"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Téléphone</ion-label>
+    <ion-input id="TelFamille" [(ngModel)]="tel"></ion-input>
+  </ion-item>
+  <button ion-button (click)="ajoutFamille(nom,mail,tel)"><ion-icon name="add"></ion-icon></button>
+</ion-content>

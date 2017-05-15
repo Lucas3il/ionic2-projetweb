@@ -4,6 +4,9 @@ import 'rxjs/add/operator/map';
 import { Famille } from '../../classes/Famille';
 import {DepotLivre}  from '../depot-livre/depot-livre';
 import {GestionFamille}  from '../gestion-famille/gestion-famille';
+import {RetraitLivre}  from '../retrait-livre/retrait-livre';
+import {GestionLivre}  from '../gestion-livre/gestion-livre';
+import {NouvelleFamille}  from '../nouvelle-famille/nouvelle-famille';
 
 /**
  * Generated class for the Accueil page.
@@ -67,5 +70,17 @@ export class Accueil {
 
   goGestionFamille(){
    this.navCtrl.push(GestionFamille, { param1: this.familleSelectionnee });
+  }
+
+  goRetrait(){
+    this.navCtrl.push(RetraitLivre, { param1: this.familleSelectionnee });
+  }
+
+  goGestionLivre(){
+    this.navCtrl.push(GestionLivre);
+  }
+
+  goNouvelleFamille(){
+    this.navCtrl.push(NouvelleFamille);
   }
 }
