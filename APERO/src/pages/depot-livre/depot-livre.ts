@@ -105,7 +105,7 @@ export class DepotLivre {
       var listeLivre=JSON.stringify(this.allDepot);
       var famille=JSON.stringify(this.famille);
       console.log(famille);
-    	xhr.open("GET", "C:/wamp64/www/depotLivre.php?famille="+famille+"&&listeLivre="+listeLivre, true);
+    	xhr.open("GET", "http://leofazendeiro.fr/TestApero/depotLivre.php?famille="+famille+"&&listeLivre="+listeLivre, true);
     	xhr.send(null);
 
     	xhr.onreadystatechange = function(){
