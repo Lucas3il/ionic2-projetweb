@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>achat-livre</ion-title>
+    <ion-title>Achat de livre de la famille {{famille.nom}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,6 +22,17 @@
         </li>
       </ul>
     </ion-list>
+  </div>
+  <div class="droite">
+    <div class="titre">Panier</div>
+    <ion-list *ngIf="listeChoisie.length>0" class="listeLivre">
+      <ul>
+       <li *ngFor="let livre of listeChoisie; let i = index">
+          <b>{{livre.Titre_Livre}}</b><br/>{{livre.Nom_Auteur}} {{livre.Prenom_Auteur}} {{livre.Nom_Editeur}} {{livre.AnneeParution_Livre}} <button ion-button><ion-icon right name="trash" (click)="retireListe(i)"></ion-icon></button>
+        </li>
+      </ul>
+    </ion-list>
+    <button ion-button color="secondary" (click)="validerListe()" *ngIf="listeChoisie.length>0">Valider le panier</button>
   </div>
 
 </ion-content>

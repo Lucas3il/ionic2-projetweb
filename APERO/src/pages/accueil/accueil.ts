@@ -91,6 +91,6 @@ export class Accueil {
   }
 
   goAchatLivre(){
-    this.navCtrl.push(AchatLivre);
+    this.navCtrl.push(AchatLivre, { param1: this.familleSelectionnee });
   }
 }

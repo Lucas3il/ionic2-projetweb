@@ -118,6 +118,7 @@ export class DepotLivre {
         console.log("xhr.readyState : "+xhr.readyState+" xhr.status : "+xhr.status);
       }
 		}
+    this.allDepot=new Array<Livre>();
   }
 
 }
