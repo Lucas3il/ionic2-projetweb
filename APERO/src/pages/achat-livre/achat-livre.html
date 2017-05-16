@@ -1,0 +1,27 @@
+<!--
+  Generated template for the AchatLivre page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>achat-livre</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="gauche">
+    <ion-list *ngIf="allLivre.length>0" class="listeLivre">
+      <ul>
+       <li *ngFor="let livre of allLivre; let i = index">
+          <b>{{livre.Titre_Livre}}</b><br/>{{livre.Nom_Auteur}} {{livre.Prenom_Auteur}} {{livre.Nom_Editeur}} {{livre.AnneeParution_Livre}} <button ion-button><ion-icon right name="cash" (click)="ajoutPanier(i)"></ion-icon></button>
+        </li>
+      </ul>
+    </ion-list>
+  </div>
+
+</ion-content>

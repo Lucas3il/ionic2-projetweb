@@ -19,6 +19,7 @@ import { RetraitLivre } from '../pages/retrait-livre/retrait-livre';
 import { GestionFamille } from '../pages/gestion-famille/gestion-famille';
 import { GestionLivre } from '../pages/gestion-livre/gestion-livre';
 import {NouvelleFamille}  from '../pages/nouvelle-famille/nouvelle-famille';
+import { AchatLivre } from '../pages/achat-livre/achat-livre';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {NouvelleFamille}  from '../pages/nouvelle-famille/nouvelle-famille';
     RetraitLivre,
     GestionFamille,
     GestionLivre,
-    NouvelleFamille
+    NouvelleFamille,
+    AchatLivre
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import {NouvelleFamille}  from '../pages/nouvelle-famille/nouvelle-famille';
     RetraitLivre,
     GestionFamille,
     GestionLivre,
-    NouvelleFamille
+    NouvelleFamille,
+    AchatLivre
   ],
   providers: [
     StatusBar,

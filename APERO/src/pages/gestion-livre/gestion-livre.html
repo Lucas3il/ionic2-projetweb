@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <div class="gauche">
+  <div class="droite">
     <ion-list *ngIf="allLivre.length>0" class="listeLivre">
       <ul>
         <li *ngFor="let livre of allLivre; let i = index">
@@ -23,7 +23,7 @@
       </ul>
     </ion-list>
   </div>
-  <div class="droite">
+  <div class="gauche">
     <ion-item>
       <ion-label floating>ISBN</ion-label>
       <ion-input type="number" [(ngModel)]="ISBN"></ion-input>

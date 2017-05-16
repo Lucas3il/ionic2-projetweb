@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <div class="gauche">
+  <div class="droite">
     <ion-list *ngIf="allRetrait.length>0" class="listeLivre">
       <ul>
         <li *ngFor="let livre of allRetrait; let i = index">
@@ -24,7 +24,7 @@
     </ion-list>
     <button ion-button color="secondary" (click)="validerListe()" *ngIf="allRetrait.length>0">Valider la liste</button>
   </div>
-  <div class="droite">
+  <div class="gauche">
     <ul>
       <li *ngFor="let livre of listeExemplaire; let i = index" >
         <b>{{livre.Titre_Livre}}</b><button ion-button (click)="selectExemplaire(i)"><ion-icon name="add-circle"></ion-icon></button>

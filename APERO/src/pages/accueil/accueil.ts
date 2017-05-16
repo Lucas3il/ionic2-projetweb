@@ -8,6 +8,7 @@ import {RetraitLivre}  from '../retrait-livre/retrait-livre';
 import {GestionLivre}  from '../gestion-livre/gestion-livre';
 import {NouvelleFamille}  from '../nouvelle-famille/nouvelle-famille';
 import {AjoutEtablissement}  from '../ajout-etablissement/ajout-etablissement';
+import {AchatLivre}  from '../achat-livre/achat-livre';
 
 /**
  * Generated class for the Accueil page.
@@ -87,5 +88,9 @@ export class Accueil {
   
   goGestionEtablissement(){
     this.navCtrl.push(AjoutEtablissement);
+  }
+
+  goAchatLivre(){
+    this.navCtrl.push(AchatLivre);
   }
 }
