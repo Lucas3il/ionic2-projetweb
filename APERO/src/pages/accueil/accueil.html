@@ -16,46 +16,32 @@
 
   <ion-grid>
     <ion-row>
+
+    </ion-row>
+    <ion-row>
       <ion-col>
         <ion-list>
-          <button ion-item *ngFor="let famille of familles" (click)="selectionFamille(famille)">
-        {{famille.nom}} {{famille.mail}}
-      </button>
+          <div class="card" *ngFor="let famille of familles">
+            <ion-card class="ion-card-normale"  (click)="selectionFamille(famille);">
+              <ion-card-header>Famille <b>{{famille.nom}}</b></ion-card-header>
+              <ion-card-content> Mail : {{famille.mail}}<br/> Téléphone : {{famille.telephone}}
+              </ion-card-content>
+            </ion-card>
+          </div>
         </ion-list>
       </ion-col>
       <ion-col>
-        <ion-item>
-          <h1>Famille</h1>
-          <ion-label>Nom</ion-label>
-          <ion-input id="NomFamille"  [(ngModel)]="nom" disabled="true"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Mail</ion-label>
-          <ion-input id="MailFamille"  [(ngModel)]="mail" disabled="true"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Téléphone</ion-label>
-          <ion-input id="TelFamille"  [(ngModel)]="tel" disabled="true"></ion-input>
-        </ion-item>
-        <ion-grid>
-          <ion-row>
-            <button ion-button disabled={{buttonDisabled}} (click)="goDepot()">Dépôt de livre</button></ion-row>
-          <ion-row>
-            <button ion-button disabled={{buttonDisabled}} (click)="goGestionFamille()">Retrait de livre</button></ion-row>
-          <ion-row>
-            <button ion-button disabled={{buttonDisabled}} (click)="goGestionFamille()">Modification de la famille</button>
-          </ion-row>
-          <ion-row>
-            <button ion-button  (click)="goGestionLivre()">Gérer les livres</button>
-          </ion-row> 
-          <ion-row>
-            <button ion-button  (click)="goNouvelleFamille()">Nouvelle Famille</button>
-          </ion-row>
-          <ion-row>
-            <button ion-button (click)="goGestionEtablissement()">Gérer les Etablissements</button>
-          </ion-row>
-        </ion-grid>
+        <div class="button-bar">
+          <a class=button><button ion-button disabled={{buttonDisabled}} (click)="goDepot()">Dépôt de livre</button></a>
+          <a class=button> <button ion-button disabled={{buttonDisabled}} (click)="goGestionFamille()">Retrait de livre</button></a>
+          <a class=button> <button ion-button disabled={{buttonDisabled}} (click)="goGestionFamille()">Modification de la famille</button></a></div>
+        <div class="button-bar">
+          <a class=button><button ion-button (click)="goGestionLivre()">Gérer les livres</button></a>
+          <a class=button> <button ion-button (click)="goNouvelleFamille()">Nouvelle Famille</button></a>
+          <a class=button> <button ion-button (click)="goGestionEtablissement()">Gérer les Etablissements</button></a>
+        </div>
       </ion-col>
     </ion-row>
+
   </ion-grid>
 </ion-content>

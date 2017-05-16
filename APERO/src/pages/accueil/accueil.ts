@@ -44,7 +44,7 @@ export class Accueil {
 
         var famille: Famille;
         for (var i: number = 1; i < rep.length; i++) {
-          famille = new Famille(rep[i]["ID_Famille"], rep[i]["Nom"], rep[i]["Telephone_Famille"], rep[i]["Mail_Famille"]);
+          famille = new Famille(rep[i]["ID_Famille"], rep[i]["Nom"], rep[i]["Telephone_Famille"], rep[i]["Mail_Famille"],rep[i]["Solde_Famille"]);
           listeFamilles.push(famille);
         }
       }
@@ -62,7 +62,7 @@ export class Accueil {
     this.tel = item.telephone;
     this.familleSelectionnee= item;
     this.buttonDisabled=null;
-    console.log(this.buttonDisabled);
+    this.chargerListeFamilles();
   }
 
   goDepot(){
