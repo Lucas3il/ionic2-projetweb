@@ -27,6 +27,7 @@ export class Accueil {
   mail:string;
   nom:string;
   buttonDisabled=true;
+  indexFamilleSelectionnee:number;
 
   constructor(public navCtrl: NavController) {
     this.chargerListeFamilles();
@@ -57,13 +58,14 @@ export class Accueil {
     console.log('ionViewDidLoad Accueil');
   }
 
-  selectionFamille(item: Famille) {
+  selectionFamille(item: Famille,i:string) {    
     this.nom = item.nom;
     this.mail = item.mail;
     this.tel = item.telephone;
     this.familleSelectionnee= item;
     this.buttonDisabled=null;
-    this.chargerListeFamilles();
+    this.indexFamilleSelectionnee=Number(i);
+    //this.chargerListeFamilles();
   }
 
   goDepot(){
@@ -89,8 +91,26 @@ export class Accueil {
   goGestionEtablissement(){
     this.navCtrl.push(AjoutEtablissement);
   }
-
-  goAchatLivre(){
+  
+   goAchatLivre(){
     this.navCtrl.push(AchatLivre, { param1: this.familleSelectionnee });
+  }
+
+  getBackgroundColor(i:number){    
+    if (i==this.indexFamilleSelectionnee){
+      return "#32db64";
+    }
+    else{
+      return "#f4f4f4";
+    }
+  }
+
+  getCOuleurSolde(i:number){
+    if (i>=0){
+      return "#222";
+    }
+    else{
+      return "#f53d3d";
+    }
   }
 }

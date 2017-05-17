@@ -30,7 +30,13 @@
           <ion-label floating>Téléphone</ion-label>
           <ion-input id="TelFamille" [(ngModel)]="tel"></ion-input>
         </ion-item>
+          <ion-item>
+          <ion-label floating>Solde</ion-label>
+          <ion-input id="Solde_Famille" [readonly]="true" [(ngModel)]="solde"></ion-input>
+        </ion-item>
         <button ion-button (click)="modificationFamille(nom,mail,tel)"><ion-icon name="checkmark"></ion-icon></button>
+        <button ion-button *ngIf="solde>0"(click)="RAZSolde()">Versement effectué</button>
+        <button ion-button *ngIf="solde<0"(click)="RAZSolde()">Paiement effectué</button>
       </ion-col>
       <ion-col>
         <h1>Enfants</h1>

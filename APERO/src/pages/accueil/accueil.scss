@@ -21,11 +21,6 @@ ion-input{
     color: red;    
 }
 
-button{
-    float: right;
-    width:100%;
-}
-
 .labels{
     font-size: 20px;
     font-weight: bold;
@@ -52,5 +47,9 @@ button{
 .ion-card-selectionnee{
     background-color: #32db64;
 }
+
+ ion-card {
+     cursor:pointer;
+ }
 
 }

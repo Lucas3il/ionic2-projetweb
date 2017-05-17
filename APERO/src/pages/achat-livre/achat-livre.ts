@@ -66,8 +66,6 @@ export class AchatLivre {
 				 var rep = JSON.parse(xhr.responseText);
         //var rep = xhr.responseText;
         this.etatExemplaires=rep;
-        console.log(this.etatExemplaires);
-        console.log(this.etatExemplaires.length);
         let alert = this.alertCtrl.create();
     alert.setTitle('Choisir un exemplaire');
     for (var n:number=0; n<this.etatExemplaires.length; n++){
@@ -79,14 +77,16 @@ export class AchatLivre {
       });
     }
     alert.addButton('Cancel');
-    alert.addButton({
-      text: 'OK',
-      handler: data => {
-        this.exemplaireChoisi=data;
-        this.listeChoisie[this.listeChoisie.length]=this.allLivre[i];
-        this.panier[this.panier.length]=data;
-      }
-    });
+    if (this.etatExemplaires.length>0){
+      alert.addButton({
+        text: 'OK',
+        handler: data => {
+          this.exemplaireChoisi=data;
+          this.listeChoisie[this.listeChoisie.length]=this.allLivre[i];
+          this.panier[this.panier.length]=data;
+        }
+      });
+    }
     alert.present();
 			}
       else {

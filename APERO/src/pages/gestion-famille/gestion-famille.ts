@@ -30,7 +30,8 @@ export class GestionFamille {
   tel: string;
   mail: string;
   nom: string;
-  famille: Famille
+  famille: Famille;
+  solde: number;
 
   enfantSelectionne: Enfant;
   prenomEnfant: string;
@@ -44,6 +45,7 @@ export class GestionFamille {
     this.tel = this.famille.telephone;
     this.mail = this.famille.mail;
     this.nom = this.famille.nom;
+    this.solde = this.famille.solde;
     this.afficherEnfant = false;
     this.chargerListeEnfants();
     this.chargerListeClasses();
@@ -266,6 +268,18 @@ export class GestionFamille {
     console.log('ionViewDidLoad GestionFamille');
   }
 
-
+  RAZSolde() {
+      var xhr = new XMLHttpRequest();
+      // envoi requete
+      xhr.open("GET", "http://leofazendeiro.fr/TestApero/gestion-famille.php?action=raz_solde&&id_famille=" + this.famille.ID, true);
+      xhr.send(null);
+       xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          alert('Sauvegarde effectuée');
+          console.log(xhr.responseText);
+        }
+      }
+      this.solde=0;
+  }
 
 }
